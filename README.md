@@ -1,15 +1,15 @@
-# PH.leolin310148.ShortcutBadger
+# PH.Leolin.ShortcutBadger
 
-[![NuGet](https://img.shields.io/nuget/v/PH.leolin310148.ShortcutBadger.svg?style=flat-square)](https://www.nuget.org/packages/PH.leolin310148.ShortcutBadger/)
+[![NuGet](https://img.shields.io/nuget/v/PH.Leolin.ShortcutBadger.svg?style=flat-square)](https://www.nuget.org/packages/PH.Leolin.ShortcutBadger/)
 
-A Xamarin Android binding for [leolin310148 ShortcutBadger](https://github.com/leolin310148/ShortcutBadger). 
+A Xamarin Android binding for [Leo Lin, ShortcutBadger](https://github.com/leolin310148/ShortcutBadger). 
 
 ## Nuget Package
 
-The latest stable binding package can be found on [Nuget](https://www.nuget.org/packages/PH.leolin310148.ShortcutBadger/), based on version `1.1.18`.
+The latest stable binding package can be found on [Nuget](https://www.nuget.org/packages/PH.Leolin.ShortcutBadger/), based on version `1.1.18`.
 
 ```text
-Install-Package PH.leolin310148.ShortcutBadger
+Install-Package PH.Leolin.ShortcutBadger
 ```
 
 ## Usage
