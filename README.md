@@ -19,7 +19,7 @@ Install-Package PH.Leolin.ShortcutBadger
 
 <hr />
 
-## ShortcutBadger Readme details:
+## ShortcutBadger readme details:
 
 <table>
     <tr>
