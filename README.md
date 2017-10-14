@@ -17,9 +17,7 @@ Install-Package PH.Leolin.ShortcutBadger
 -  For Xamarin implementation see the [sample project](/src/SampleApp) in this repo.
 -  For original Android project see the [sample](https://github.com/leolin310148/ShortcutBadger/tree/master/SampleApp) and [documentation](https://github.com/leolin310148/ShortcutBadger#isbadgeworking).
 
-<br/>
 <hr />
-<br/>
 
 ## ShortcutBadger Readme details:
 
