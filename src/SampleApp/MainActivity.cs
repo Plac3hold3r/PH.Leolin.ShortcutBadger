@@ -1,85 +1,89 @@
 ﻿using Android.App;
+using Android.Content;
+using Android.Content.PM;
 using Android.OS;
+using Android.Widget;
+using Leolin.Shortcutbadger;
 
 namespace SampleApp
 {
-    [Activity(Label = "SampleApp", MainLauncher = true)]
+    [Activity(
+        MainLauncher = true,
+        Label = "@string/app_name",
+        Icon = "@mipmap/ic_launcher")]
     public class MainActivity : Activity
     {
+        private EditText _numInput;
+        private Button _btnSetBadge;
+        private Button _launchNotification;
+        private Button _removeBadgeBtn;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
-            //SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.activity_main);
 
-            //EditText numInput = FindViewById<EditText>(R.id.numInput);
+            _numInput = FindViewById<EditText>(Resource.Id.numInput);
 
-            //Button button = FindViewById<Button>(R.id.btnSetBadge);
-            //            button.setOnClickListener(new View.OnClickListener() {
-            //            @Override
-            //            public void onClick(View v)
-            //            {
-            //                int badgeCount = 0;
-            //                try
-            //                {
-            //                    badgeCount = Integer.parseInt(numInput.getText().toString());
-            //                }
-            //                catch (NumberFormatException e)
-            //                {
-            //                    Toast.makeText(getApplicationContext(), "Error input", Toast.LENGTH_SHORT).show();
-            //                }
+            _btnSetBadge = FindViewById<Button>(Resource.Id.btnSetBadge);
+            _btnSetBadge.Click += Button_Click;
 
-            //                boolean success = ShortcutBadger.applyCount(MainActivity.this, badgeCount);
+            _launchNotification = FindViewById<Button>(Resource.Id.btnSetBadgeByNotification);
+            _launchNotification.Click += LaunchNotification_Click;
 
-            //                Toast.makeText(getApplicationContext(), "Set count=" + badgeCount + ", success=" + success, Toast.LENGTH_SHORT).show();
-            //            }
-            //        });
+            _removeBadgeBtn = FindViewById<Button>(Resource.Id.btnRemoveBadge);
+            _removeBadgeBtn.Click += RemoveBadgeBtn_Click;
 
-            //        Button launchNotification = (Button)findViewById(R.id.btnSetBadgeByNotification);
-            //        launchNotification.setOnClickListener(new View.OnClickListener() {
-            //            @Override
-            //            public void onClick(View v)
-            //        {
-            //            int badgeCount = 0;
-            //            try
-            //            {
-            //                badgeCount = Integer.parseInt(numInput.getText().toString());
-            //            }
-            //            catch (NumberFormatException e)
-            //            {
-            //                Toast.makeText(getApplicationContext(), "Error input", Toast.LENGTH_SHORT).show();
-            //            }
+            //find the home launcher Package
+            Intent intent = new Intent(Intent.ActionMain);
+            intent.AddCategory(Intent.CategoryHome);
+            ResolveInfo resolveInfo = PackageManager.ResolveActivity(intent, PackageInfoFlags.MatchDefaultOnly);
+            var currentHomePackage = resolveInfo.ActivityInfo.PackageName;
 
-            //            finish();
-            //            startService(
-            //                new Intent(MainActivity.this, BadgeIntentService.class).putExtra("badgeCount", badgeCount)
-            //                );
-            //            }
-            //});
+            TextView textViewHomePackage = FindViewById<TextView>(Resource.Id.textViewHomePackage);
+            textViewHomePackage.Text = "launcher:" + currentHomePackage;
+        }
 
-            //        Button removeBadgeBtn = (Button)findViewById(R.id.btnRemoveBadge);
-            //removeBadgeBtn.setOnClickListener(new View.OnClickListener() {
-            //            @Override
-            //            public void onClick(View view)
-            //{
-            //    boolean success = ShortcutBadger.removeCount(MainActivity.this);
+        private void RemoveBadgeBtn_Click(object sender, System.EventArgs e)
+        {
+            bool success = ShortcutBadger.RemoveCount(this);
 
-            //    Toast.makeText(getApplicationContext(), "success=" + success, Toast.LENGTH_SHORT).show();
-            //}
-            //        });
+            Toast.MakeText(ApplicationContext, "success=" + success, ToastLength.Short)
+                .Show();
+        }
 
+        private void LaunchNotification_Click(object sender, System.EventArgs e)
+        {
+            if (int.TryParse(_numInput.Text, out int badgeCount))
+            {
+                Finish();
 
-            //        //find the home launcher Package
-            //        Intent intent = new Intent(Intent.ACTION_MAIN);
-            //intent.addCategory(Intent.CATEGORY_HOME);
-            //        ResolveInfo resolveInfo = getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
-            //String currentHomePackage = resolveInfo.activityInfo.packageName;
+                var intent = new Intent(this, typeof(MainActivity));
+                intent.PutExtra("badgeCount", badgeCount);
+                StartService(intent);
+            }
+            else
+            {
+                Toast.MakeText(ApplicationContext, "Error input", ToastLength.Short)
+                    .Show();
+            }
+        }
 
-            //TextView textViewHomePackage = (TextView)findViewById(R.id.textViewHomePackage);
-            //textViewHomePackage.setText("launcher:" + currentHomePackage);
-            //        }
-            //    }
+        private void Button_Click(object sender, System.EventArgs e)
+        {
+            if (int.TryParse(_numInput.Text, out int badgeCount))
+            {
+                bool success = ShortcutBadger.ApplyCount(this, badgeCount);
+                Toast.MakeText(ApplicationContext, "Set count=" + badgeCount + ", success=" + success, ToastLength.Short)
+                    .Show();
+            }
+            else
+            {
+                Toast.MakeText(ApplicationContext, "Error input", ToastLength.Short)
+                    .Show();
+            }
         }
     }
 }
