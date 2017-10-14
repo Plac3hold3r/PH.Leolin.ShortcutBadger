@@ -28,65 +28,65 @@ Install-Package PH.Leolin.ShortcutBadger
         <td width="130">
             <h3>Sony</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_sony.png"/>
+            <img src="screenshots/ss_sony.png" width="120"/>
         </td>
         <td width="130">
             <h3>Samsung</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_samsung.png"/>
+            <img src="screenshots/ss_samsung.png" width="120"/>
         </td>
         <td width="130">
             <h3>LG</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_lg.png"/>
+            <img src="screenshots/ss_lg.png" width="120"/>
         </td>
         <td width="130">
             <h3>HTC</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_htc.png"/>
+            <img src="screenshots/ss_htc.png" width="120"/>
         </td>
     </tr>
     <tr>
         <td width="130">
             <h3>Xiaomi</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_xiaomi.png"/>
+            <img src="screenshots/ss_xiaomi.png" width="120"/>
             <br>
         </td>
         <td width="130">
             <h3>ASUS</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_asus.png"/>
+            <img src="screenshots/ss_asus.png" width="120"/>
         </td>
         <td width="130">
             <h3>ADW</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_adw.png"/>
+            <img src="screenshots/ss_adw.png" width="120"/>
         </td>
         <td width="130">
             <h3>APEX</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_apex.png"/>
+            <img src="screenshots/ss_apex.png" width="120"/>
         </td>
     <tr>
         <td width="130">
             <h3>NOVA</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_nova.png"/>
+            <img src="screenshots/ss_nova.png" width="120"/>
         </td>
         <td width="130">
             <h3>Huawei</h3>
             <br>
             (Not Fully Support)
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_huawei.png"/>
+            <img src="screenshots/ss_huawei.png" width="120"/>
             <br>
             (1.1.7+)
         </td>
         <td width="130">
             <h3>ZUK</h3>
             <br>
-            <img src="https://raw.github.com/linwoain/ShortcutBadger/master/screenshots/ss_zuk.png"/>
+            <img src="screenshots/ss_zuk.png" width="120"/>
             <br>
             (1.1.10+)
         </td>
@@ -95,7 +95,7 @@ Install-Package PH.Leolin.ShortcutBadger
             <br>
             (Not Fully Support)
             <br>
-            <img src="screenshots/ss_oppo.png?raw=true"/>
+            <img src="screenshots/ss_oppo.png" width="120"/>
             <br>
             (1.1.10+)
         </td>
@@ -104,19 +104,19 @@ Install-Package PH.Leolin.ShortcutBadger
         <td width="130">
             <h3>EverythingMe</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_evme.png"/>
+            <img src="screenshots/ss_evme.png" width="120"/>
         </td>
         <td width="130">
             <h3>ZTE</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_zte.png"/>
+            <img src="screenshots/ss_zte.png" width="120"/>
             <br>
             (1.1.17+)
         </td>
         <td width="260" colspan="2">
             <h3>KISS</h3>
             <br>
-            <img src="https://raw.github.com/leolin310148/ShortcutBadger/master/screenshots/ss_kiss.png"/>
+            <img src="screenshots/ss_kiss.png"/>
             <br>
             (1.1.18+)
         </td>

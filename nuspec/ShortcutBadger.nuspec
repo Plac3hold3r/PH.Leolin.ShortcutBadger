@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>PH.Leolin.ShortcutBadger</id>
+    <version>1.1118.0</version>
+    <title>Leo Lin ShortcutBadger for Xamarin.Android</title>
+    <authors>Plac3hold3r</authors>
+    <owners>Plac3hold3r</owners>
+    <licenseUrl>https://github.com/Plac3hold3r/PH.Leolin.ShortcutBadger/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Plac3hold3r/PH.Leolin.ShortcutBadger</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Plac3hold3r/PH.Leolin.ShortcutBadger/master/nuspec/nuget_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Xamarin Android binding for Leo Lin, ShortcutBadger. The ShortcutBadger makes your Android App show the count of unread messages as a badge on your App shortcut.</description>
+    <summary>A Xamarin Android binding for Leo Lin, ShortcutBadger.</summary>
+    <tags>xamarin, monodroid, C#, xamarin.android, android, badge</tags>
+  </metadata>
+  <files>
+    <file src="..\src\Binding\bin\Release\ShortcutBadger.dll" target="lib\MonoAndroid80\ShortcutBadger.dll" />
+    <file src="..\src\Binding\bin\Release\ShortcutBadger.pdb" target="lib\MonoAndroid80\ShortcutBadger.pdb" />
+  </files>
+</package>
