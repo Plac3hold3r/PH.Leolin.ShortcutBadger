@@ -51,13 +51,13 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="JavaDocs\ShortcutBadger-1.1.18-javadoc.jar" />
+    <None Include="JavaDocs\ShortcutBadger-1.1.19-javadoc.jar" />
   </ItemGroup>
   <PropertyGroup>
-    <Java8DocPaths>JavaDocs/ShortcutBadger-1.1.18-javadoc</Java8DocPaths>
+    <Java8DocPaths>JavaDocs/ShortcutBadger-1.1.19-javadoc</Java8DocPaths>
   </PropertyGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\ShortcutBadger-1.1.18.aar" />
+    <LibraryProjectZip Include="Jars\ShortcutBadger-1.1.19.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
