@@ -6,7 +6,7 @@ A Xamarin Android binding for [Leo Lin, ShortcutBadger](https://github.com/leoli
 
 ## Nuget Package
 
-The latest stable binding package can be found on [Nuget](https://www.nuget.org/packages/PH.Leolin.ShortcutBadger/), based on version `1.1.18`.
+The latest stable binding package can be found on [Nuget](https://www.nuget.org/packages/PH.Leolin.ShortcutBadger/), based on version `1.1.19`.
 
 ```text
 Install-Package PH.Leolin.ShortcutBadger
@@ -117,6 +117,13 @@ Install-Package PH.Leolin.ShortcutBadger
             <img src="screenshots/ss_kiss.png"/>
             <br>
             (1.1.18+)
+        </td>
+    </tr>
+    <tr>
+        <td width="130">
+            <h3>LaunchTime</h3>
+            <br>
+            <img src="screenshots/ss_launchtime.png" width="120"/>
         </td>
     </tr>
 </table>
