@@ -6,7 +6,7 @@ A Xamarin Android binding for [Leo Lin, ShortcutBadger](https://github.com/leoli
 
 ## Nuget Package
 
-The latest stable binding package can be found on [Nuget](https://www.nuget.org/packages/PH.Leolin.ShortcutBadger/), based on version `1.1.19`.
+The latest stable binding package can be found on [Nuget](https://www.nuget.org/packages/PH.Leolin.ShortcutBadger/), based on version `1.1.21`.
 
 ```text
 Install-Package PH.Leolin.ShortcutBadger
